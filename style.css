@@ -1,0 +1,214 @@
+/*************************************
+			BASE STYLES
+*************************************/
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+}
+
+.cont {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#info, #contact, #use, #update {
+	padding: 50px;
+}
+/*************************************
+			SPECIFIC ELEMENTS
+*************************************/
+#button {
+	color: white;
+	display: inline-block;
+	background: #3498db;
+	padding: 10px;
+}
+
+pre {
+	background: white;
+	color: #bdc3c7;
+	padding: 20px;
+	font-size: 12px;
+	font-family: 'Montserrat', sans-serif;
+	word-wrap: break-word;
+	margin-bottom: 20px;
+}
+
+#arrow {
+	display: block;
+	margin-top: 20px;
+}
+/*************************************
+			 AREA STYLES
+*************************************/
+#fullGallery {
+	background-image: url('1.jpg');
+	/*background-attachment: fixed;*/
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: cover;
+	text-align: center;
+	padding: 250px 100px;
+}
+
+#contact {
+	border-bottom: 10px dashed white;
+}
+
+#preload {
+	display: none;
+}
+
+#update li {
+	list-style-type: circle;
+	list-style-position: inside; 
+}
+
+#last {
+	margin-top: 20px;
+}
+/*************************************
+			 BACKGROUND STYLES
+*************************************/
+body {
+	background: #3498db;
+}
+
+#update {
+	background: white;
+}
+
+#use {
+	background: #2980b9;
+}
+/*************************************
+			FONT STYLES
+*************************************/
+.mHead {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#info {
+	text-align: center;
+}
+
+h1 {
+	color: #3498db;
+	font-size: 32px;
+	padding: 20px;
+	background: white;
+	border: 1px solid white;
+	display: inline-block;
+}
+
+#contact p {
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+#update li {
+	font-size: 14px;
+}
+
+#use p {
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+}
+/*************************************
+			COLOR STYLES
+*************************************/
+#info, #contact, #use h5 {
+	color: white;
+}
+
+#contact #mail, #contact #git {
+	color: white;
+}
+
+#info h3 {
+	color: #2980b9;
+}
+
+#update li {
+	color: #bdc3c7;
+}
+
+#update h5, h6, #use p, #contact p {
+	color: #2c3e50;
+}
+/*************************************
+			IMAGE STYLES
+*************************************/
+#info img {
+	width: 100px;
+	border-radius: 100%;
+	margin-bottom: 20px;
+}
+
+#contact img {
+	display: none;
+}
+
+#git {
+	background-image: url('git.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 20px 20px;
+}
+
+#mail {
+	background-image: url('mail.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 20px 20px;	
+}
+
+#contact #mail, #contact #git {
+	padding-left: 25px;
+}
+/*************************************
+			MEDIA Qs
+*************************************/
+@media (max-width: 700px) {
+	#fullGallery {
+		padding: 100px 20px;
+	}
+	#fullGallery h1 {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 500px) {
+	#fullGallery h1 {
+		font-size: 18px;
+	}
+	#button {
+		padding: 10px;
+	}
+}
+
+@media (max-width: 400px) {
+	#fullGallery h1 {
+		padding: 10px;
+		font-size: 16px;
+	}
+	#contact #mail, #contact #git {
+		padding: 0;
+	}
+}
+
+@media (max-width: 400px) {
+	#contact #mail, #contact #git {
+		display: none;
+	}	
+	#contact img {
+		display: initial;
+		width: 20px;
+		float: left;
+		padding-right: 10px;
+	}
+}
