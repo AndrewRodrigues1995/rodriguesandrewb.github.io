@@ -19,11 +19,33 @@ var galleryImages = [
 
 var i = 1;
 preload = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg'];
+var span = '<span class="sym">+ </span>';
+var min = '<span class="min">- </span>';
+
+$('#use h4').prepend(min);
+
 
 $(document).ready(function() {
 	for (var j = 0; j < preload.length; j++) {
 		$('#preload').append('<img src="' + preload[j] + '">');
 	}
+});
+
+$('#use h4').click(function() {
+	var title = $(this);
+	console.log($(this));
+	if ($(this).hasClass('open')) {
+		$(this).removeClass('open');
+		$(this).prepend(min);
+		title.children('.sym').remove();
+		console.log('hi');
+	} else {
+		$(this).addClass('open');
+		$(this).prepend(span);
+		$(this).children('.min').remove();
+	}
+	$(this).has('span');
+	title.next('div').toggle(function() {});
 });
 
 var change = function changeImage() {

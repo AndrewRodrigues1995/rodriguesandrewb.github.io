@@ -1,6 +1,10 @@
 /*************************************
 			BASE STYLES
 *************************************/
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.6;
@@ -33,7 +37,7 @@ body {
 	clear: both;
 	height: 0;
 }
-#info img {
+#me {
 	float: left;
 	margin-right: 20px;
 	margin-bottom: 20px;
@@ -48,19 +52,36 @@ body {
 	padding: 10px;
 }
 
-pre {
-	background: white;
-	color: #bdc3c7;
-	padding: 20px;
-	font-size: 12px;
-	font-family: 'Montserrat', sans-serif;
-	word-wrap: break-word;
-	margin-bottom: 20px;
-}
-
 #arrow {
 	display: block;
 	margin-top: 20px;
+}
+
+#docu {
+	margin: 0 auto;
+}
+
+.boxes {
+	background: white;
+	padding: 20px;
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	max-width: 500px;
+	border-bottom: 1px solid #3498db;
+}
+
+.boxes:last-child {
+	margin-bottom: 20px;
+}
+
+.boxes ol {
+	list-style-type: decimal;
+	list-style-position: inside;
+	list-style-position: inside;
+}
+
+.toggle {
+	display: none;
 }
 /*************************************
 			 AREA STYLES
@@ -143,9 +164,17 @@ a {
 	text-decoration: none;
 }
 
+#use h4 {
+	font-size: 14px;
+}
+
+#update h6 {
+	font-size: 14px;
+}
+
 .boxed {
 	color: white;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: 'Montserrat', sans-serif;
 	word-wrap: break-word;
 }
@@ -156,7 +185,8 @@ a {
 	color: white;
 }
 
-#contact #mail, #contact #git {
+
+#use h4 {
 	color: white;
 }
 
@@ -164,16 +194,16 @@ a {
 	color: #2c3e50;
 }
 
-#update li {
+#update li, #use li {
 	color: #bdc3c7;
 }
 
-#update h5, h6, #use p, #contact p {
+#update h5, h6, #contact p {
 	color: #2c3e50;
 }
 
 #use h6 {
-	color: #3498db;
+	color: #2980b9;
 }
 
 h2 span {
@@ -183,30 +213,14 @@ h2 span {
 			IMAGE STYLES
 *************************************/
 #info img {
-	width: 100px;
 	border-radius: 100%;
 }
 
-#contact img {
-	display: none;
-}
-
-#git {
-	background-image: url('git.png');
-	background-repeat: no-repeat;
-	background-position: top left;
-	background-size: 20px 20px;
-}
-
-#mail {
-	background-image: url('mail.png');
-	background-repeat: no-repeat;
-	background-position: top left;
-	background-size: 20px 20px;	
-}
-
-#contact #mail, #contact #git {
-	padding-left: 25px;
+.pass img {
+	width: 17px;
+	display: inline-block;
+	height: 17px;
+	float: none;
 }
 /*************************************
 			MEDIA Qs
@@ -220,7 +234,7 @@ h2 span {
 	}
 }
 
-@media (max-width: 520px) {
+@media (max-width: 580px) {
 	#fullGallery h1 {
 		font-size: 18px;
 	}
@@ -231,7 +245,7 @@ h2 span {
 		clear: left;
 		display: block;
 	}
-	#info img {
+	#me {
 		float: none;
 		text-align: center;
 		margin: 0 auto 20px;
@@ -253,10 +267,4 @@ h2 span {
 	#contact #mail, #contact #git {
 		display: none;
 	}	
-	#contact img {
-		display: initial;
-		width: 20px;
-		float: left;
-		padding-right: 10px;
-	}
 }
