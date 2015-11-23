@@ -9,43 +9,15 @@ var galleryImages = [
 	{image: "url('2.jpg')",title: "Modern Browser Support",color: '#2ecc71'},
 	{image: "url('3.jpg')",title: "Easily Editable Clean Code",color: '#9b59b6'},
 	{image: "url('4.jpg')",title: "Template & CSS Included",color: '#7f8c8d'},
-	{image: "url('5.jpg')",title: "GitHub Repository Included",color: 'orange'},
-	{image: "url('6.jpg')",title: "Updated Regularly",color: '#9b59b6'},
-	{image: "url('7.jpg')",title: "Unlimited Slide Support",color: '#2ecc71'},
-	{image: "url('8.jpg')",title: "Easy Timing Adjustments",color: '#3498db'},
-	{image: "url('9.jpg')",title: "User-Friendly Code",color: '#2ecc71'},
-	{image: "url('10.jpg')",title: "Too Many Slides!",color: '#e74c3c'},
 ];
 
 var i = 1;
-preload = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg'];
-var span = '<span class="sym">+ </span>';
-var min = '<span class="min">- </span>';
-
-$('#use h4').prepend(min);
-
+preload = ['1.jpg','2.jpg','3.jpg','4.jpg'];
 
 $(document).ready(function() {
 	for (var j = 0; j < preload.length; j++) {
 		$('#preload').append('<img src="' + preload[j] + '">');
 	}
-});
-
-$('#use h4').click(function() {
-	var title = $(this);
-	console.log($(this));
-	if ($(this).hasClass('open')) {
-		$(this).removeClass('open');
-		$(this).prepend(min);
-		title.children('.sym').remove();
-		console.log('hi');
-	} else {
-		$(this).addClass('open');
-		$(this).prepend(span);
-		$(this).children('.min').remove();
-	}
-	$(this).has('span');
-	title.next('div').toggle(function() {});
 });
 
 var change = function changeImage() {
@@ -66,3 +38,36 @@ $('#title').css('color', galleryImages[0].color);
 $('#button').css('background', galleryImages[0].color);
 
 setInterval(change,3000);
+
+var minus = '<span>- </span>';
+var add = '<span>+ </span>';
+
+$('#use .toggle').each(function() {
+	$(this).hide();
+});
+
+$('#use h4').prepend(minus);
+
+
+$('#use h4').click(function() {
+	$clicked = $(this);
+	if ($(this).hasClass('open')) {
+		$(this).next('div').hide('slow');
+		$(this).removeClass('open');
+		$(this).children().remove('span');
+		$(this).prepend(minus);
+	} else {
+		$('#use h4').each(function() {
+			if ($(this).hasClass('open')) {
+				$(this).next('div').hide('slow');
+				$(this).removeClass('open');
+				$(this).children().remove('span');
+				$(this).prepend(minus);
+			}
+		});
+		$clicked.addClass('open');
+		$clicked.children().remove('span');
+		$clicked.prepend(add);
+		$clicked.next('div').toggle('slow');
+	}
+});

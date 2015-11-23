@@ -62,12 +62,10 @@ body {
 }
 
 .boxes {
-	background: white;
-	padding: 20px;
+	/*background: white;*/
 	font-size: 14px;
 	font-family: 'Montserrat', sans-serif;
 	max-width: 500px;
-	border-bottom: 1px solid #3498db;
 }
 
 .boxes:last-child {
@@ -78,10 +76,16 @@ body {
 	list-style-type: decimal;
 	list-style-position: inside;
 	list-style-position: inside;
+	background: white;
+	padding: 20px;
+}
+
+.boxes ol.second {
+	margin-bottom: 10px;
 }
 
 .toggle {
-	display: none;
+	/*display: none;*/
 }
 /*************************************
 			 AREA STYLES
@@ -125,6 +129,11 @@ body {
 
 #use {
 	background: #2980b9;
+}
+
+ol.second {
+	background: black;
+	font-size: 10px;
 }
 /*************************************
 			FONT STYLES
@@ -178,6 +187,10 @@ a {
 	font-family: 'Montserrat', sans-serif;
 	word-wrap: break-word;
 }
+
+h6 {
+	margin-bottom: 10px;
+}
 /*************************************
 			COLOR STYLES
 *************************************/
@@ -194,8 +207,8 @@ a {
 	color: #2c3e50;
 }
 
-#update li, #use li {
-	color: #bdc3c7;
+#update li {
+	color: #7f8c8d;;
 }
 
 #update h5, h6, #contact p {
@@ -208,6 +221,20 @@ a {
 
 h2 span {
 	color: #2980b9;
+}
+
+.boxes p {
+	color: #7f8c8d;
+}
+
+.boxes li {
+	color: white;
+}
+
+.boxes hr {
+	background: none;
+	border: 1px dashed #bdc3c7;
+	margin: 20px 0;
 }
 /*************************************
 			IMAGE STYLES
