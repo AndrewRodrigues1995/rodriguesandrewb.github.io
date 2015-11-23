@@ -11,6 +11,9 @@ var galleryImages = [
 	{image: "url('4.jpg')",title: "Template & CSS Included",color: '#7f8c8d'},
 ];
 
+
+//Decided to enter preload directly into the dom without the javascript
+
 // var i = 1;
 // preload = ['1.jpg','2.jpg','3.jpg','4.jpg'];
 
