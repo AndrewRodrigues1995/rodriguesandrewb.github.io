@@ -15,7 +15,7 @@ var galleryImages = [
 //Decided to enter preload directly into the dom without the javascript
 
 var i = 1;
-preload = ['1.jpg','2.jpg','3.jpg','4.jpg'];
+preload = ['1.jpg','12.jpg','3.jpg','4.jpg'];
 
 $(document).ready(function() {
 	for (var j = 0; j < preload.length; j++) {
